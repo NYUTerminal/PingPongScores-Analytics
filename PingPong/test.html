@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PingPong RazorFish</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href=" ">
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="awesomplete.css" />
+  <script src="awesomplete.js"></script>
+    <script type="text/javascript" src="jQuery-Autocomplete/scripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="jQuery-Autocomplete/scripts/jquery.mockjax.js"></script>
+    <script type="text/javascript" src="jQuery-Autocomplete/src/jquery.autocomplete.js"></script>
+</head>
+<body>
+<!--   <input type="text" name="country" id="autocomplete"/>
+  <input type="text" name="country" id="autocomplete-ajax" style="position: absolute; z-index: 2; background: transparent;"/>
+  <input type="text" name="country" id="autocomplete-ajax-x" disabled="disabled" style="color: #CCC; position: absolute; background: transparent; z-index: 1;"/>
+ <input data-list="CSS, JavaScript, HTML, SVG, ARIA, MathML" data-multiple data-minchars="1"/> -->
+  <input type="text" name="country" id="autocomplete"/>
+
+   <script>
+        var countries = [
+            { value: 'Andorra', data: 'AD' },
+            // ...
+            { value: 'Zimbabwe', data: 'ZZ' }
+        ];
+
+        $('#autocomplete').autocomplete({
+            lookup: countries,
+            onSelect: function (suggestion) {
+                alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+            }
+        });
+  </script>
+    
+<!--   <div class="ui-widget player1 input-list style-1 clearfix">
+     <input id = "tags" type="text" placeholder="Player 1/ Team1" size="50">VS
+    </div> -->
+</body>
+</html>

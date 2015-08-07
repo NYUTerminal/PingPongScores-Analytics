@@ -1,0 +1,234 @@
+html { 
+  width: 100%;
+  height: 100%;
+  background: url(Background.png) no-repeat center center fixed; 
+  /*vertical-align: baseline;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+color: #000000;
+font-family: 'my-regular';
+}
+
+@font-face {
+   font-family: 'my-light';
+   font-size: 20px;
+   src: url(fonts/MyriadPro-Light_0.otf);
+}
+
+@font-face {
+   font-family: 'my-regular';
+   font-size: 20px;
+   src: url(fonts/MyriadPro-Regular.otf);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, ,
+dl, dt,style dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+.row{
+   padding-bottom: 100px;
+}
+
+
+ul ,li{
+  list-style-type: none;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 30%;
+  height: 30px;
+  font-family: 'my-light';
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  position: absolute;
+}
+input[type="date"] ,  input[type="time"]  {
+  display: block;
+  margin: 0;
+  width: 15%;
+  height: 30px;
+  font-family: 'my-light';
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  position: absolute;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.style-1 input[type="text"]{
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+.style-1 input[type="text"]:focus,
+.style-1 input[type="text"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+.player1{
+  margin-left: 10%;
+  float: left;
+}
+
+.player2{
+  /*width: 100%;*/
+  margin-left: 45%;
+  float: left;
+}
+
+.date{
+  margin-left: 25.5%;
+ float: left;
+}
+
+.time{
+ margin-left: 56%;
+ float: left;
+}
+
+.score1{
+ margin-left: 25.5%;
+ float: left;
+}
+
+.score2{
+ margin-left: 29.5%;
+ float: left;
+}
+
+.btn {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: 'my-regular';
+  color: #ffffff;
+  font-size: 20px;
+  background: #990000;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+ position: absolute;
+ width: 400px;
+ margin-left: 35%;
+}
+
+.btn:hover {
+  position: absolute;
+  background: #ffffff;
+  color: #990000;
+  text-decoration: none;
+}
+
+.tabs {
+  position: relative;   
+  min-height: 500px; /* This part sucks */
+  clear: both;
+  margin: 150px 0 25px;
+  background: white;
+  width: 100%;
+}
+.tab {
+  width: 50%;
+  float: left;
+}
+.tab label {
+  background: #990000; 
+  color: white;
+  width: 200px; 
+  /*border: 1px solid #ccc; */
+  font-size: 20px;
+  margin-left: -1px; 
+  margin-right: 1px;
+  position: relative;
+  left: 1px; 
+  top: -29px;
+  -webkit-transition: background-color .17s linear;
+}
+.tab [type=radio] {
+  display: none;   
+}
+
+.content {
+  position: absolute;
+  /*top: -1px;*/
+  left: 0;
+  background: white;
+  right: 0;
+  bottom: 0;
+  padding: 0px;
+  -webkit-transition: opacity .6s linear;
+  opacity: 0;
+}
+
+[type=radio]:checked ~ label {
+  background: white;
+  color: #990000;
+  /*border-bottom: 1px solid white;*/
+  z-index: 2;
+}
+
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+  opacity: 1;
+}
+
+.tab1{
+  width: 40%;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 46.5%;
+  padding-right: 46%;
+}
+.tab2{
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 45%;
+  padding-right: 43.5%;
+}
+.another-game{
+  color: #990000;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-no-suggestion { padding: 2px 5px;}
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: bold; color: #000; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { font-weight: bold; font-size: 16px; color: #000; display: block; border-bottom: 1px solid #000; }
+
+input { font-size: 28px; padding: 10px; border: 1px solid #CCC; display: block; margin: 20px 0; }
+
